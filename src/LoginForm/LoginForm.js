@@ -1,8 +1,5 @@
 import React from "react";
 
-//React uses virtual DOM to compare the new state of the DOM tree with the old state
-//useNavigate is a hook that allows us to navigate to a new route
-//useNavigate === useHistory
 export const LoginForm = ({username, setUsername, password, setPassword, setIsAdmin}) => {
   console.log("Login form rendered"); 
   const adminCreds = {username: "admin", password: "admin"};
@@ -13,9 +10,6 @@ export const LoginForm = ({username, setUsername, password, setPassword, setIsAd
       setIsAdmin(false);
     }
   };
-  //useState is a hook (js function) that returns an array with two elements
-  // (data and a function to update the data)
-
   const form = (
     <div className="login-form">
       <h1>Login</h1>
@@ -39,6 +33,5 @@ export const LoginForm = ({username, setUsername, password, setPassword, setIsAd
       </button>
     </div>
   );
-  //username = 'bobby' - WRONG
   return form;
 };
